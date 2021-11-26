@@ -1,0 +1,87 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "name": "Angular ToDo",
+      "color": "#afdeee",
+      "textcolor": "#000000"
+    },
+    {
+      "id": 2,
+      "name": "homework",
+      "color": "#eab48d",
+      "textcolor": "#000000"
+    },
+    {
+      "id": 3,
+      "name": "KSA Quiz",
+      "color": "#1261a0",
+      "textcolor": "#000000"
+    },
+    {
+      "id": 4,
+      "name": "New years Party",
+      "color": "#1261a0",
+      "textcolor": "#000000"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "listId": 1,
+      "title": "Cisco assignment",
+      "description": "Chapter test 2",
+      "date": "2021-10-30T22:00:00.000Z",
+      "statusId": 1,
+      "order": 1
+    },
+    {
+      "id": 2,
+      "listId": 2,
+      "title": "Cleaning",
+      "description": "The windows need some cleaning",
+      "date": "2021-10-26T22:00:00.000Z",
+      "statusId": 1,
+      "order": 1
+    },
+    {
+      "id": 3,
+      "listId": 1,
+      "title": "Mobile Development",
+      "description": "Deadline to upload project description and team",
+      "date": "2021-10-24T22:00:00.000Z",
+      "statusId": 1,
+      "order": 2
+    }
+  ],
+  "statuses": [
+    {
+      "id": 1,
+      "name": "ongoing"
+    },
+    {
+      "id": 2,
+      "name": "done"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "School",
+      "color": "#afdeee",
+      "textcolor": "#000000"
+    },
+    {
+      "id": 2,
+      "name": "Home",
+      "color": "#eab48d",
+      "textcolor": "#000000"
+    },
+    {
+      "id": 3,
+      "name": "KSA",
+      "color": "blue",
+      "textcolor": "#000000"
+    }
+  ]
+}

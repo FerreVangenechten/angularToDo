@@ -1,0 +1,6 @@
+<h1>Welcome on the ToDo app</h1>
+<button type="button" class="btn btn-success addBtn" (click)="addList()"><i class="fas fa-plus"></i> Add new list</button>
+<div class="row">
+  <app-list class="col-12 col-sm-6 col-md-6, col-lg-6, col-xl-4 align-items-stretch" *ngFor="let list of (lists$ | async)" [list]="list">
+  </app-list>
+</div>
