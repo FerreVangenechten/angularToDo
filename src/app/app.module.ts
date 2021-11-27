@@ -11,11 +11,20 @@ import { HttpClientModule } from '@angular/common/http';
 //to create and use template driven forms
 import { FormsModule } from '@angular/forms';
 import { ListComponent } from './list/list.component';
+import { ListFormComponent } from './list-form/list-form.component';
+import { ItemFormComponent } from './item-form/item-form.component';
 
 //drag and drop
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { ListFormComponent } from './list-form/list-form.component';
-import { ItemFormComponent } from './item-form/item-form.component';
+
+//material
+import {MatMenuModule} from '@angular/material/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 
 @NgModule({
@@ -31,9 +40,18 @@ import { ItemFormComponent } from './item-form/item-form.component';
     AppRoutingModule,
     HttpClientModule,
     DragDropModule,
-    FormsModule
+    FormsModule,
+    MatMenuModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatCheckboxModule
+    ],
+  providers: [
+      MatDatepickerModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

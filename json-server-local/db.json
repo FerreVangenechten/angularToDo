@@ -8,7 +8,7 @@
     },
     {
       "id": 2,
-      "name": "homework",
+      "name": "Homework",
       "color": "#eab48d",
       "textcolor": "#000000"
     },
@@ -20,9 +20,9 @@
     },
     {
       "id": 4,
-      "name": "New years Party",
-      "color": "#1261a0",
-      "textcolor": "#000000"
+      "name": "Demo",
+      "color": "brown",
+      "textcolor": "white"
     }
   ],
   "items": [
@@ -52,6 +52,24 @@
       "date": "2021-10-24T22:00:00.000Z",
       "statusId": 1,
       "order": 2
+    },
+    {
+      "id": 4,
+      "listId": 3,
+      "title": "x",
+      "description": "x",
+      "date": "",
+      "statusId": 0,
+      "order": 0
+    },
+    {
+      "id": 5,
+      "listId": 1,
+      "title": "a",
+      "description": "a",
+      "date": "",
+      "statusId": 0,
+      "order": 0
     }
   ],
   "statuses": [

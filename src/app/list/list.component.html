@@ -1,25 +1,37 @@
-<div id="list" *ngIf="list" [ngStyle]="{'background-color': list.color, 'color': list.textcolor}">
-  <div class="row" >
-    <h1 class="col-10">{{list.name}}</h1>
-    <button type="button" class="btn" (click)="editList(list.id)"><i class="fas fa-edit"></i></button>
-    <button type="button" class="btn" (click)="deleteList(list.id)"><i class="fas fa-trash-alt"></i></button>
-  </div>
-</div>
-<div class="float-right">
-  <button type="btn btn-success" class="btn" (click)="addItem(list.id)"><i class="fas fa-plus-circle"></i> Add new item</button>
-</div>
-
-<div *ngIf="items && items.length > 0" >
-  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-    <div class="example-box row" *ngFor="let item of items" cdkDrag>
-      <div class="col-8">
-        <input type="checkbox" class="option-input radio">
-        {{item.title}}
+<div [ngStyle]="{'background-color': list.color}" class="mt-5">
+  <!-- <div id="list" *ngIf="list" [ngStyle]="{'background-color': list.color, 'color': list.textcolor}"> -->
+  <div id="list" *ngIf="list">
+    <div class="row" >
+      <h1 class="col-10">{{list.name}}</h1>
+      <!-- <button type="button" class="btn" (click)="editList(list.id)"><i class="fas fa-edit"></i></button>
+      <button type="button" class="btn" (click)="deleteList(list.id)"><i class="fas fa-trash-alt"></i></button> -->
+      <div class="col-2">
+        <button mat-icon-button [matMenuTriggerFor]="listMenu" class="btn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+        <mat-menu #listMenu="matMenu">
+            <button class="matItem" mat-menu-item (click)="editList(list.id)">Edit list</button>
+            <button mat-menu-item (click)="deleteList(list.id)">Delete list</button>
+        </mat-menu>
       </div>
-      <div class="col-4">
-        <button type="button" class="btn" (click)="editItem(item.id)"><i class="fas fa-edit"></i></button>
-        <button type="button" class="btn" (click)="deleteItem(item.id)"><i class="fas fa-trash-alt"></i></button>
+      <div class="col-12">
+        <button type="btn btn-success" class="btn" (click)="addItem(list.id)"><i class="fas fa-plus-circle"></i> Add new item</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="items && items.length > 0">
+    <div cdkDropList class="item-list" (cdkDropListDropped)="drop($event)">
+      <div cdkDragHandle class="item-box row example-handle" *ngFor="let item of items" cdkDrag [ngStyle]="{'background-color': list.color}">
+        <div class="col-8 item-content">
+          <mat-checkbox> <span (click)="editItem(item.id)" >{{item.title}}</span> </mat-checkbox>
+        </div>
+        <div class="col-2">
+          <button type="button" class="btn" (click)="deleteItem(item.id)"><i class="fas fa-times"></i></button>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+

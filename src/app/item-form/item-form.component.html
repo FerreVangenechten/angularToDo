@@ -13,16 +13,11 @@
     <input type="text" class="form-control" id="description" name="description" placeholder="description" [(ngModel)]="item.description"
            #description="ngModel" required>
   </div>
-  <!-- <div class="form-group">
-    <label for="date">Date</label>
-    <mat-form-field appearance="fill">
-      <mat-label>Choose a date</mat-label>
-      <input matInput [Datepicker]="picker">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-  </div> -->
-
+  <div class="form-group">
+    <input matInput [matDatepicker]="basicDatepicker">
+    <mat-datepicker-toggle class="text-dark" [for]="basicDatepicker"></mat-datepicker-toggle>
+    <mat-datepicker #basicDatepicker></mat-datepicker>
+  </div>
 
   <button type="submit" class="btn btn-primary" *ngIf="isAdd" [disabled]="!itemForm.form.valid || isSubmitted">Add</button>
   <button type="submit" class="btn btn-primary" *ngIf="isEdit" [disabled]="!itemForm.form.valid || isSubmitted">Save</button>

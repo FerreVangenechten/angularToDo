@@ -20,5 +20,4 @@
   </div>
   <button type="submit" class="btn btn-primary" *ngIf="isAdd" [disabled]="!listForm.form.valid || isSubmitted">Add</button>
   <button type="submit" class="btn btn-primary" *ngIf="isEdit" [disabled]="!listForm.form.valid || isSubmitted">Save</button>
-  <button type="button" class="btn btn-primary" *ngIf="isEdit" [disabled]="!listForm.form.valid || isSubmitted">Delete</button>
 </form>
