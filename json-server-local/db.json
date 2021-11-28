@@ -18,7 +18,7 @@
     {
       "id": 4,
       "name": "Personal",
-      "color": "brown"
+      "color": "#B57A4E"
     }
   ],
   "items": [
@@ -43,7 +43,7 @@
     {
       "id": 6,
       "listId": 2,
-      "title": "Cisco assignment",
+      "title": "Cisco xxx",
       "description": "Chapter test 2",
       "date": "2021-11-29T23:00:00.000Z",
       "statusId": 2,
@@ -55,7 +55,7 @@
       "title": "Mobile Development",
       "description": "Deadline to upload project description and team",
       "date": "2021-12-15T23:00:00.000Z",
-      "statusId": 1,
+      "statusId": 2,
       "order": 2
     },
     {
@@ -65,7 +65,7 @@
       "description": "drag & drop items",
       "date": "",
       "statusId": 1,
-      "order": 1
+      "order": 2
     },
     {
       "id": 9,
@@ -74,16 +74,7 @@
       "description": "x",
       "date": "",
       "statusId": 2,
-      "order": 4
-    },
-    {
-      "id": 10,
-      "listId": 1,
-      "title": "Edit / Delete lists",
-      "description": "x",
-      "date": "",
-      "statusId": 2,
-      "order": 2
+      "order": 1
     },
     {
       "id": 11,
@@ -104,22 +95,22 @@
       "order": 2
     },
     {
-      "id": 13,
-      "listId": 1,
-      "title": "add new Items",
-      "description": "x",
-      "date": "",
-      "statusId": 2,
-      "order": 5
-    },
-    {
       "id": 14,
       "listId": 1,
       "title": "sort automatically",
       "description": "x",
       "date": "",
       "statusId": 2,
-      "order": 6
+      "order": 4
+    },
+    {
+      "id": 15,
+      "listId": 1,
+      "title": "Demo filmpje",
+      "description": "x",
+      "date": "2021-11-27T23:00:00.000Z",
+      "statusId": 1,
+      "order": 5
     }
   ],
   "statuses": [

@@ -48,6 +48,25 @@ export class ItemFormComponent implements OnInit {
 
   listItems: Item[] = [];
 
+  changeStatus(id:number) {
+    this.itemService.getItemById(id).subscribe(result =>
+      {
+        this.item = result
+
+        if(this.item.statusId == 1){
+          this.item.statusId = 2;
+        } else {
+          this.item.statusId = 1;
+        }
+
+        this.itemService.putItem(id, this.item).subscribe(result => {
+        },
+        error => {
+          this.errorMessage = error.message;
+        });
+      });
+  }
+
   onSubmit() {
     this.isSubmitted = true;
     if (this.isAdd) {
