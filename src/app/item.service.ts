@@ -23,7 +23,18 @@ export class ItemService {
   }
 
   getItemsByListId(id: number): Observable<Item[]> {
+    return timer(1, 3000).pipe(switchMap(() => this.httpClient.get<Item[]>("http://localhost:3000/items?listId="+id+"&_sort=order,date&_order=asc,asc")));
+  }
+
+  getItemsByListIdOnce(id: number): Observable<Item[]> {
     return this.httpClient.get<Item[]>("http://localhost:3000/items?listId="+id+"&_sort=order,date&_order=asc,asc");
+  }
+  getItemByOrder(order: number,listId:number): Observable<Item[]> {
+    return this.httpClient.get<Item[]>("http://localhost:3000/items?listId="+listId+"&order="+order);
+  }
+
+  getItemByOrder1(order: number,listId:number): Observable<Item> {
+    return this.httpClient.get<Item>("http://localhost:3000/items?listId="+listId+"&order="+order);
   }
 
   getItem(): Observable<Item[]> {

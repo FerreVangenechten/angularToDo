@@ -16,7 +16,7 @@ export class ListFormComponent implements OnInit, OnDestroy {
   isEdit: boolean = false;
   listId: number = 0;
 
-  list: List = { id: 0, name: "",color:"" , textcolor:""};
+  list: List = { id: 0, name: "",color:""};
 
   isSubmitted: boolean = false;
   errorMessage: string = "";

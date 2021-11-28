@@ -10,12 +10,16 @@
   </div>
   <div class="form-group">
     <label for="description">Description</label>
-    <input type="text" class="form-control" id="description" name="description" placeholder="description" [(ngModel)]="item.description"
+    <input type="textarea" class="form-control" id="description" name="description" placeholder="description" [(ngModel)]="item.description"
            #description="ngModel" required>
   </div>
   <div class="form-group">
-    <input matInput [matDatepicker]="basicDatepicker">
-    <mat-datepicker-toggle class="text-dark" [for]="basicDatepicker"></mat-datepicker-toggle>
+    <label for="date">Date</label>
+    <div class="row">
+      <mat-datepicker-toggle class="text-dark" [for]="basicDatepicker"></mat-datepicker-toggle>
+      <input id="date" name="date" class="form-control col"  placeholder="Choose a date" matInput [matDatepicker]="basicDatepicker"
+      [(ngModel)]="item.date" #date="ngModel">
+    </div>
     <mat-datepicker #basicDatepicker></mat-datepicker>
   </div>
 

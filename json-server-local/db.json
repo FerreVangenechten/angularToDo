@@ -3,73 +3,123 @@
     {
       "id": 1,
       "name": "Angular ToDo",
-      "color": "#afdeee",
-      "textcolor": "#000000"
+      "color": "#afdeee"
     },
     {
       "id": 2,
       "name": "Homework",
-      "color": "#eab48d",
-      "textcolor": "#000000"
+      "color": "#eab48d"
     },
     {
       "id": 3,
       "name": "KSA Quiz",
-      "color": "#1261a0",
-      "textcolor": "#000000"
+      "color": "#b4d3b2"
     },
     {
       "id": 4,
-      "name": "Demo",
-      "color": "brown",
-      "textcolor": "white"
+      "name": "Personal",
+      "color": "brown"
     }
   ],
   "items": [
     {
-      "id": 1,
-      "listId": 1,
-      "title": "Cisco assignment",
-      "description": "Chapter test 2",
-      "date": "2021-10-30T22:00:00.000Z",
+      "id": 4,
+      "listId": 3,
+      "title": "Zaal Vastleggen",
+      "description": "Bellen naar de Zaal in Geel",
+      "date": "",
       "statusId": 1,
       "order": 1
     },
     {
-      "id": 2,
-      "listId": 2,
+      "id": 5,
+      "listId": 4,
       "title": "Cleaning",
       "description": "The windows need some cleaning",
-      "date": "2021-10-26T22:00:00.000Z",
+      "date": "2021-11-16T23:00:00.000Z",
       "statusId": 1,
       "order": 1
     },
     {
-      "id": 3,
-      "listId": 1,
+      "id": 6,
+      "listId": 2,
+      "title": "Cisco assignment",
+      "description": "Chapter test 2",
+      "date": "2021-11-29T23:00:00.000Z",
+      "statusId": 2,
+      "order": 1
+    },
+    {
+      "id": 7,
+      "listId": 2,
       "title": "Mobile Development",
       "description": "Deadline to upload project description and team",
-      "date": "2021-10-24T22:00:00.000Z",
+      "date": "2021-12-15T23:00:00.000Z",
       "statusId": 1,
       "order": 2
     },
     {
-      "id": 4,
-      "listId": 3,
-      "title": "x",
-      "description": "x",
+      "id": 8,
+      "listId": 1,
+      "title": "Drag & Drop",
+      "description": "drag & drop items",
       "date": "",
-      "statusId": 0,
-      "order": 0
+      "statusId": 1,
+      "order": 1
     },
     {
-      "id": 5,
+      "id": 9,
       "listId": 1,
-      "title": "a",
-      "description": "a",
+      "title": "List colors",
+      "description": "x",
       "date": "",
-      "statusId": 0,
-      "order": 0
+      "statusId": 2,
+      "order": 4
+    },
+    {
+      "id": 10,
+      "listId": 1,
+      "title": "Edit / Delete lists",
+      "description": "x",
+      "date": "",
+      "statusId": 2,
+      "order": 2
+    },
+    {
+      "id": 11,
+      "listId": 1,
+      "title": "edit / delete items",
+      "description": "x",
+      "date": "2021-11-27T23:00:00.000Z",
+      "statusId": 2,
+      "order": 3
+    },
+    {
+      "id": 12,
+      "listId": 3,
+      "title": "Drank bestellen",
+      "description": "bellen naar drankhandel",
+      "date": "",
+      "statusId": 1,
+      "order": 2
+    },
+    {
+      "id": 13,
+      "listId": 1,
+      "title": "add new Items",
+      "description": "x",
+      "date": "",
+      "statusId": 2,
+      "order": 5
+    },
+    {
+      "id": 14,
+      "listId": 1,
+      "title": "sort automatically",
+      "description": "x",
+      "date": "",
+      "statusId": 2,
+      "order": 6
     }
   ],
   "statuses": [
@@ -80,26 +130,6 @@
     {
       "id": 2,
       "name": "done"
-    }
-  ],
-  "categories": [
-    {
-      "id": 1,
-      "name": "School",
-      "color": "#afdeee",
-      "textcolor": "#000000"
-    },
-    {
-      "id": 2,
-      "name": "Home",
-      "color": "#eab48d",
-      "textcolor": "#000000"
-    },
-    {
-      "id": 3,
-      "name": "KSA",
-      "color": "blue",
-      "textcolor": "#000000"
     }
   ]
 }

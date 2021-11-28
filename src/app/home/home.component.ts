@@ -18,6 +18,10 @@ export class HomeComponent implements OnInit {
  constructor(private listService: ListService, private router: Router) { }
 
   ngOnInit(): void {
+    this.getLists();
+  }
+
+  getLists(){
     this.lists$ = this.listService.getLists();
   }
 

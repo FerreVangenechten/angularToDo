@@ -45,18 +45,34 @@ export class ItemFormComponent implements OnInit {
     this.putItem$.unsubscribe();
   }
 
+
+  listItems: Item[] = [];
+
   onSubmit() {
     this.isSubmitted = true;
     if (this.isAdd) {
       //zorgen dat het bij de juiste lijst terecht komt
       this.item.listId = this.listId
-      this.postItem$ = this.itemService.postItem(this.item).subscribe(result => {
-                //all went well
-                this.router.navigateByUrl("/");
-              },
-              error => {
-                this.errorMessage = error.message;
-              });
+      this.item.statusId = 1
+      //put it on the end of the list
+      this.itemService.getItemsByListIdOnce(this.listId).subscribe(result => {
+          this.listItems = result
+          console.log(this.listItems)
+          if (this.listItems.length > 0){
+            this.item.order = this.listItems[this.listItems.length-1].order + 1
+          }
+          else {
+            this.item.order = 1
+          }
+          //post the item
+          this.postItem$ = this.itemService.postItem(this.item).subscribe(result => {
+            //all went well
+            this.router.navigateByUrl("/");
+          },
+          error => {
+            this.errorMessage = error.message;
+          });
+      })
     }
     if (this.isEdit) {
       this.putItem$ = this.itemService.putItem(this.itemId, this.item).subscribe(result => {

@@ -15,23 +15,29 @@
         </mat-menu>
       </div>
       <div class="col-12">
-        <button type="btn btn-success" class="btn" (click)="addItem(list.id)"><i class="fas fa-plus-circle"></i> Add new item</button>
+        <button type="btn" class="btn btn-addItem" (click)="addItem(list.id)"><i class="fas fa-plus-circle"></i> Add new item</button>
       </div>
     </div>
   </div>
 
   <div *ngIf="items && items.length > 0">
-    <div cdkDropList class="item-list" (cdkDropListDropped)="drop($event)">
+    <div cdkDropList class="item-list" (cdkDropListDropped)="drop($event,list.id)">
       <div cdkDragHandle class="item-box row example-handle" *ngFor="let item of items" cdkDrag [ngStyle]="{'background-color': list.color}">
         <div class="col-8 item-content">
-          <mat-checkbox> <span (click)="editItem(item.id)" >{{item.title}}</span> </mat-checkbox>
+          <mat-checkbox color="#000000" [checked]="item.statusId == 2"  (change)="changeStatus(item.id)">
+            <span  (click)="editItem(item.id)" [ngClass]="[item.statusId ==2 ? 'done' : 'going']">
+                {{item.title}}
+              </span>
+          </mat-checkbox>
         </div>
         <div class="col-2">
-          <button type="button" class="btn" (click)="deleteItem(item.id)"><i class="fas fa-times"></i></button>
+          <button type="button" class="btn" (click)="deleteItem(item.id,list.id)"><i class="fas fa-times"></i></button>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
 
 

@@ -67,3 +67,16 @@
     }
   }
 
+  .done {
+    text-decoration: line-through;
+    font-family: 'Old Standard TT';
+  }
+
+  .going {
+    text-decoration: none;
+    font-family: 'Old Standard TT';
+  }
+
+.btn-addItem:hover {
+    border: 1px solid #000;
+}
